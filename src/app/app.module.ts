@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { SolicitudComponent } from './solicitud/solicitud.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule  } from '@angular/material/button';
+import { CentroComponent } from './centro/centro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SolicitudComponent,
+    CentroComponent,
 
   ],
   imports: [
