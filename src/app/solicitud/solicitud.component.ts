@@ -8,10 +8,11 @@ import { MatButton } from '@angular/material/button';
 })
 export class SolicitudComponent implements OnInit {
 
-   solicitud = {nombre:"",apellidos:""};
+   solicitud = {nombre:"",apellidos:"",nacimiento: new Date()};
 
-   solicitudes = [{nombre:"Javier",apellidos:"Gamarra"},{nombre:"Juan",apellidos:"Martín"}];
+   solicitudes = [{nombre:"Javier",apellidos:"Gamarra",nacimiento:"01/01/1975"},{nombre:"Juan",apellidos:"Martín",nacimiento:"11/12/1990"}];
    nombreCentro = "Garcilaso de la Vega";
+
 
   constructor() {
 

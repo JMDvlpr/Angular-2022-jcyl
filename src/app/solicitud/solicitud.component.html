@@ -1,7 +1,8 @@
-<p [style.color]="+solicitud.nombre>0.5?'red':'blue'">{{solicitud.nombre}} {{solicitud.apellidos}}</p>
+<p *ngIf="solicitud.apellidos.length" [style.color]="+solicitud.nombre>0.5?'red':'blue'">{{solicitud.nombre}} {{solicitud.apellidos}}
+Fecha de nacimiento: {{solicitud.nacimiento | date:'dd/MM/yyyy'}}</p>
 <p *ngIf="!solicitud.apellidos.length" class="help is-danger">
   Los apellidos no pueden ser nulos
-  </p>
+</p>
 <form>
   <p><label>Nombre: </label><input (keyup)="nombre($event)"/></p>
   <p><label>Apellido: </label>  <input (keyup)="apellidos($event)"/></p>
@@ -20,5 +21,6 @@
 
   <selector-centro></selector-centro>
   <app-centro [centro]="nombreCentro"></app-centro>
+
 
 
