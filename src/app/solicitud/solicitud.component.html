@@ -3,22 +3,23 @@ Fecha de nacimiento: {{solicitud.nacimiento | date:'dd/MM/yyyy'}}</p>
 <p *ngIf="!solicitud.apellidos.length" class="help is-danger">
   Los apellidos no pueden ser nulos
 </p>
-<form>
-  <p><label>Nombre: </label><input (keyup)="nombre($event)"/></p>
-  <p><label>Apellido: </label>  <input (keyup)="apellidos($event)"/></p>
+<H1>Solicitud de comedor</H1>
+<h2>Nueva solicitud</h2>
+
+  <p><label>Nombre: </label><input (keyup)="nombre($event)" value="{{solicitud.nombre}}"/></p>
+  <p><label>Apellidos: </label><input (keyup)="apellidos($event)" value="{{solicitud.apellidos}}" /></p>
   <div class="example-button-row">
   <button mat-raised-button color="primary" (click)="delete()">Eliminar</button>
   </div>
-</form>
+
 
 <p>
   <table border="1">
     <tr *ngFor="let solicitud of solicitudes">
-      <td>{{ solicitud.nombre }}</td>
-      <td>{{ solicitud.apellidos }}</td>
-      </tr>
+      <app-selector-fila [solicitud]="solicitud" (solicitudBorrada)="borrarSolicitud(solicitud)"></app-selector-fila>
+    </tr>
   </table>
-
+  <hr>
   <selector-centro></selector-centro>
   <app-centro [centro]="nombreCentro"></app-centro>
 

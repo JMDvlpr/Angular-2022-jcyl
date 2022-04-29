@@ -8,7 +8,7 @@ import { MatButton } from '@angular/material/button';
 })
 export class SolicitudComponent implements OnInit {
 
-   solicitud = {nombre:"",apellidos:"",nacimiento: new Date()};
+   solicitud = {nombre:"Anonimo",apellidos:"Gonzalez",nacimiento: new Date()};
 
    solicitudes = [{nombre:"Javier",apellidos:"Gamarra",nacimiento:"01/01/1975"},{nombre:"Juan",apellidos:"Martín",nacimiento:"11/12/1990"}];
    nombreCentro = "Garcilaso de la Vega";
@@ -42,6 +42,10 @@ export class SolicitudComponent implements OnInit {
 
   delete(){
     console.log('eliminar!');
+  }
+
+  borrarSolicitud(solicitud: any) {
+    this.solicitudes = this.solicitudes.filter(solicitudExistente => solicitudExistente.nombre != solicitud.nombre)
   }
 
 }

@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule  } from '@angular/material/button';
 import { CentroComponent } from './centro/centro.component';
 import { SelectorCentroComponent } from './selector-centro/selector-centro.component';
+import { SelectorFilaComponent } from './selector-fila/selector-fila.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SelectorCentroComponent } from './selector-centro/selector-centro.compo
     SolicitudComponent,
     CentroComponent,
     SelectorCentroComponent,
+    SelectorFilaComponent,
 
   ],
   imports: [

@@ -1,6 +1,6 @@
 <hr>
 <h2>Selector de centros</h2>
-<input (keyup)="centro($event)" [value]="centroSeleccionado.nombre">
+Centro:<input (keyup)="centro($event)" [value]="centroSeleccionado.nombre">
     <div *ngFor="let centro of centrosFiltrados">
       <p (click)="seleccionarCentro(centro)">{{centro.nombre}}</p>
     </div>
