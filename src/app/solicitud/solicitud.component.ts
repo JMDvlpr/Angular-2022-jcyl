@@ -1,3 +1,4 @@
+import { SolicitudesService } from './../solicitudes.service';
 import { Component, OnInit } from '@angular/core';
 import { MatButton } from '@angular/material/button';
 
@@ -10,11 +11,14 @@ export class SolicitudComponent implements OnInit {
 
    solicitud = {nombre:"Anonimo",apellidos:"Gonzalez",nacimiento: new Date()};
 
-   solicitudes = [{nombre:"Javier",apellidos:"Gamarra",nacimiento:"01/01/1975"},{nombre:"Juan",apellidos:"Martín",nacimiento:"11/12/1990"}];
+   solicitudes = [{nombre:"anonimous",apellidos:"Gonzalez",nacimiento:"01/01/1975"}];
    nombreCentro = "Garcilaso de la Vega";
 
 
-  constructor() {
+  constructor(solicitudService: SolicitudesService) {
+
+    this.solicitudes = solicitudService.getSolicitudes();
+
 
     /*
     setInterval(()=>{
