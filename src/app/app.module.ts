@@ -11,6 +11,7 @@ import { CentroComponent } from './centro/centro.component';
 import { SelectorCentroComponent } from './selector-centro/selector-centro.component';
 import { SelectorFilaComponent } from './selector-fila/selector-fila.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PruebaRoutingComponent } from './prueba-routing/prueba-routing.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     CentroComponent,
     SelectorCentroComponent,
     SelectorFilaComponent,
+    PruebaRoutingComponent,
 
   ],
   imports: [

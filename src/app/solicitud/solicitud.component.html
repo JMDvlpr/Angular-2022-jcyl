@@ -1,3 +1,6 @@
+
+<button [routerLink]="['/prueba', solicitud.nombre]">Ir a prueba</button>
+
 <p *ngIf="solicitud.apellidos.length" [style.color]="+solicitud.nombre>0.5?'red':'blue'">{{solicitud.nombre}} {{solicitud.apellidos}}
 Fecha de nacimiento: {{solicitud.nacimiento | date:'dd/MM/yyyy'}}</p>
 <p *ngIf="!solicitud.apellidos.length" class="help is-danger">
